@@ -94,6 +94,7 @@ Generate certificates and connect them the “thing”. Three certificates are n
 
 Thing creation and generation of certificates can be through AWS console online and through AWS CLI.
 Here this will be done using OpenSSL,
+
 2) Creating a private key an RSA Key 
 ```javascript
 openssl genrsa 2048 > private_key.pem
