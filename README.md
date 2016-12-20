@@ -17,7 +17,7 @@ Hardware
 * Jumper wires  
 * HDMI cable     	    
   
- Software installations
+Software installations
 * Python 3 
 And here's some code!
 
