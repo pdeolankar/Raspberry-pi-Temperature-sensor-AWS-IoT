@@ -1,0 +1,8 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [ { "Effect": "Allow",
+		       "Action": [ "sns:Publish" ],
+		       "Resource": [ "arn:aws:sns:us-west-2:742485087494:iot-tempdata-temperature" ]
+		}
+	]
+}

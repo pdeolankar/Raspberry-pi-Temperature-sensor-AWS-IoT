@@ -1,0 +1,17 @@
+{
+  "sql":"SELECT * FROM 'topic/tempdata/temperature'",
+  "ruleDisabled":false,
+  "actions":[
+	{
+	  "dynamoDB":{
+		"tableName":"IOT-TempData",
+		"hashKeyField":"key",
+		"hashKeyValue":"${clientId()}",
+		"rangeKeyField":"timestamp",
+		"rangeKeyValue":"${timestamp()}",
+		"roleArn":"arn:aws:iam::742485087494:role/iot-tempdata-actions-role"
+	    }
+	}
+     ]
+}
+

@@ -1,0 +1,12 @@
+{
+	"sql":"SELECT * FROM 'topic/tempdatatemperature' WHERE Temperature < 22",
+	"ruleDisabled":false,
+	"actions":[ {
+		"sns":{
+			"targetArn":"arn:aws:sns:us-west-2:742485087494:iot-tempdata-temperature",
+			"roleArn":"arn:aws:iam::742485087494:role/iot-tempdata-actions-role"
+		 }
+		}
+	]
+}
+				   
