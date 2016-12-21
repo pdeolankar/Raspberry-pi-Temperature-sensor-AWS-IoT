@@ -39,6 +39,7 @@ sudo apt-get install mosquitto-clients
 sudo  pip install paho-mqtt	
 ```
 * Adafruit Python DHT Sensor Library
+
 1)	Library for python to communicate with Raspberry pi gpio pins
 Tutorial for Adafruit’s guide and library installation can be found  [here](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-gpio)
 ```javascript
@@ -123,7 +124,7 @@ A ‘thing’ is a client device connected to AWS IoT and all these devices can 
 Create a thing for experiment, name it anything you like, here (the thing) named ‘temperature-1’.
 Execute this command and you will see a ‘thingArn’ and ‘thingName’ on screen, this means that a thing is created and you can check it on AWS IoT console.
 
-1) Create AWS IoT policy and attach it to client certificate (generated earlier)
+1) Create AWS IoT policy and attach it to client certificate (generated earlier).
 The policy document is in json format, allowiotoperations.json
 ```javascript
 {
