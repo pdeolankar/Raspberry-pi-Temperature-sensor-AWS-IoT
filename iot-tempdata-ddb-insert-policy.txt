@@ -7,7 +7,7 @@
 			"dynamodb:*"
 		    ],
 		    "Resource":[
-			"arn:aws:dynamodb:us-west-2:742485087494:table/IOT-TempData"
+			"arn:aws:dynamodb:us-west-2:123456789101:table/IOT-TempData"
 		      ]
 		}
 	]
