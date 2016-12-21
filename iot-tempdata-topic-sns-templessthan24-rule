@@ -3,10 +3,9 @@
 	"ruleDisabled":false,
 	"actions":[ {
 		"sns":{
-			"targetArn":"arn:aws:sns:us-west-2:742485087494:iot-tempdata-temperature",
-			"roleArn":"arn:aws:iam::742485087494:role/iot-tempdata-actions-role"
+			"targetArn":"arn:aws:sns:us-west-2:123456789101:iot-tempdata-temperature",
+			"roleArn":"arn:aws:iam::123456789101:role/iot-tempdata-actions-role"
 		 }
 		}
 	]
-}
-				   
+}			   
