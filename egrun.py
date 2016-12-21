@@ -10,13 +10,12 @@ from datetime import datetime
 
 #thing, certs and mqtt connection
 client_id = 'temperature-1'
-aws_endpoint = 'abz564i3evzni.iot.us-west-2.amazonaws.com'
+aws_endpoint = 'abc123d4efghi.iot.us-west-2.amazonaws.com'     #add your AWS account specific custom end-point here
 ca_filename = 'ca.pem.crt'
 cert_filename = 'certificate.pem'
 private_key_filename = 'private-key.pem'
-#in_temp_file and out_temp_file
 mqtt_topic = 'topic/tempdata/temperature'
-#conn done
+
 
 def onDisconnect(client, userdata, rc):
         print("Disconnected from AWS IoT")
@@ -56,38 +55,32 @@ def getSensorread():
         humidity, temperature = Adafruit_DHT.read_retry(11,4)
         print ('Temp: {0:0.1f} C  Humidity: {1:0.1f} %'.format(temperature, humidity) )
         return humidity, temperature, cpuserial, a
+       
         
-        
-#serial = getserial()            
+
 while True:
                 now = getNow()
                 humidity, temperature, cpuserial, a = getSensorread()
-                            #a, humidity, temperature, cpuserial = getSensorread()
                 payload = json.dumps(
                                    dict(
-                                             Temperature=str(temperature), Humidity=str(humidity), RPISerialno=str(cpuserial) #, DateTime=str(a)
+                                             Temperature=str(temperature), Humidity=str(humidity), RPISerialno=str(cpuserial) 
                                          )
                         )
                 client.publish(mqtt_topic, payload)
                 
                 humidity, temperature, cpuserial, a = getSensorread()
-                url = 'https://api.powerbi.com/beta/256d83ca-875d-4d8c-8aa6-e3678b8b3867/datasets/5385d756-16f0-4e2a-8e21-7d8285b8c420/rows?key=YFeqtHfndVmcfPP8Q0b4qnI5O0RwQ%2FOAkl39cRSEGVY14F8LhHqfiuGgsJhCskzlCqM7deqWjt8PvLfjqTRdbw%3D%3D'
+                url = '<describe_your_endpoint_connection>'
                 DATA = json.dumps (
                         dict (
                         DateTime=(a), Temperature=(temperature), Moisture=(humidity)
                         )
                 )
                 print DATA
-                #payload = {'some' : 'DATA'}
                 resp = requests.post(url, data=(DATA), headers={'content-type': 'application/json'})
                 print (resp.status_code) 
         
 client.loop_start()
-#while True:
+
                 
 
 time.sleep(5)
-
-        
-        
-
