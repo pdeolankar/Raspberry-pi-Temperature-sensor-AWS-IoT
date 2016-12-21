@@ -9,9 +9,8 @@
 		"hashKeyValue":"${clientId()}",
 		"rangeKeyField":"timestamp",
 		"rangeKeyValue":"${timestamp()}",
-		"roleArn":"arn:aws:iam::742485087494:role/iot-tempdata-actions-role"
+		"roleArn":"arn:aws:iam::123456789101:role/iot-tempdata-actions-role"
 	    }
 	}
      ]
 }
-
