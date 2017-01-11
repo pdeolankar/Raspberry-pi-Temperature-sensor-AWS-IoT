@@ -1,7 +1,12 @@
 # Control AC using Raspberry Pi, AWS IoT and LIRC... 
 
-## Activity 1 and Activity 2
-## Overview
+## Pointers
+1.  Read data from Temperature sensor (DHT11) and send it to AWS IoT through raspberry pi.
+2.  Store the data in DynamoDB in AWS and send notification to mobile device.
+3.  Send signal/message back from internet to raspberry pi to carry on a event.
+4.  Transmit the IR code through IR transmitter with Raspberry Pi 2 to device compatible like A.C.
+
+## Activity 1 and 2: Overview
 
  A simple raspberry pi and AWS IoT application to send notification to user on temperature change.  The temperature sensor continuously senses and sends data to Amazon’s DynamoDB (sensor readings data stored) over secure AWS IoT connection and when temperature goes below a certain threshold (a rule) a text message (SMS) will be sent to your mobile device using Amazon SNS notification service.
 Note: This experiment is specifically for DHT11 temperature and humidity sensor.
